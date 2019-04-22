@@ -64,11 +64,7 @@ def add_periods(sentences):
     # Add a period to each element in the list.
     new_list = []
     for sentence in sentences:
-<<<<<<< HEAD
-        new_list.append(sentence + ".")
-=======
         new_list.append(sentence)
->>>>>>> Change sentence parsing
     return new_list
 
 
