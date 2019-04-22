@@ -1,0 +1,27 @@
+FormField expects a function as a component.
+
+Expected Behavior
+
+Render without issues and warnings
+
+Actual Behavior
+
+Renders ok but presents warnings
+
+`
+
+Warning: Failed prop type: Invalid prop component of type object supplied to FormField, expected function.
+
+`
+
+URL, screen shot, or Codepen exhibiting the issue
+
+https://codesandbox.io/s/4rrnnop2m4
+
+Your Environment
+
+Grommet version: 2.6.x
+
+Browser Name and version: Firefox
+
+Operating System and version (desktop or mobile): Mac Mojave

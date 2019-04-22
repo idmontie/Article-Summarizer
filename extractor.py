@@ -1,19 +1,25 @@
 # Tool to extract sentences & words from a file.
 
 from sys import argv
-import parser
+from textblob import TextBlob
 
+import parser
 
 def get_sentences(file_name):
     # Extract sentences from a text file.
     reader = open(file_name)
     sentences = reader.read()
     reader.close()
-    sentences = sentences.replace("\n", "")
+
     sentences = parser.convert_abbreviations(sentences)
-    sentences = sentences.replace("?", ".")
-    sentences = sentences.replace("!", ".")
-    sentences = sentences.split(".")
+    parts = sentences.split("\n\n")
+
+    sentences = []
+    for part in parts:
+        blob = TextBlob(part)
+        part_sentences = [str(p) for p in blob.sentences]
+        sentences = sentences + part_sentences
+
     sentences = parser.fix_broken_sentences(sentences)
     sentences = parser.remove_whitespace_list(sentences)
     sentences = parser.remove_blanks(sentences)

@@ -1,0 +1,23 @@
+When I add a badge to the avatar of list items the badge gets pushed to the left and the text gets hidden behind the avatar when overflow is meant to kick in. It behaves normally in Chrome and Edge.
+
+[x] This is not a v0.x issue.
+
+x] I have searched the [issues of this repository and believe that this is not a duplicate.
+
+Expected Behavior 🤔
+
+Overflow should behave correctly
+
+Current Behavior 😯
+
+Overflow messes up the layout of the list item. Can be seen in the link below.
+
+Steps to Reproduce 🕹
+
+Link:
+
+https://stackblitz.com/edit/react-xgzm9m?file=index.js
+
+Context 🔦
+
+Your Environment 🌎

@@ -1,0 +1,11 @@
+Description
+
+So our function arrayToHtmlList is in a pretty bad space and could use an update. We already had some discussion over at #675 but I wanted to move the update discussion over to an issue for more visibility.
+
+Current problem:
+
+It uses an awkward query selector instead of the document.prototype.getElementByID() function, and it uses an IIFE to declare an intermediate variable closure when we could do with just API chaining the return values.
+
+Another issue is we are just forcing it inside a list item. We could easily allow a formatter to be passed as the last argument with the map footprint and a default that won't change functionality, however the change in footprint because a bit... awkward as it becomes data, binding, callback, but it was an old monster to begin with.
+
+With those two issues in mind we should look at either updating or cleaning up the snippet so it is more maintainable than it's current form or decide to leave as it.
